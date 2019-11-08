@@ -1,4 +1,4 @@
----
+----
 title: "hubzone algorithm analysis"
 author: "John D. Harden"
 date: "8/27/2019"
@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-```
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
@@ -22,31 +22,32 @@ Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov
 
 load data parsed for federal database
 
-```r 
+```{r load data}
 
 #dc poverty rate
 dc_student_poverty <- read_csv("~/Desktop/Data Repo/2019/08/HUBZone_FOLO/HUBZone Data/dc_enrollment_poverty_pivot.csv")
+
 ```
 
 the first part of the analysis takes the poverty rate of each tract in DC and remove college students from the poverty universe, finding the poverty rate with students and without.  
 
-```
+```{r pressure, echo=FALSE}
 
 dc_poverty_rate <- group_by(dc_student_poverty, Id2) %>% 
   summarise(total_poverty_rate = sum(poverty_level / total) * 100,
             total_wo_students = sum((poverty_level - (undergraduate +  graduate))) / total * 100,
             pct_point_change = sum(total_wo_students - total_poverty_rate))
+
 ```
 
 to qualify for the HUBZone program, a tract must have a poverty rate of 25 percent or higher (no rounding)  
 
-```
+```{r result, echo=FALSE}
 
 dc_below_25 <- filter(dc_poverty_rate, total_poverty_rate > 25, total_wo_students < 25)
 
 dc_below_25
 
 ```
-```
-
-```
+```{r}
+=
