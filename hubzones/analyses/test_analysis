@@ -22,11 +22,9 @@ Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov
 
 load data parsed for federal database
 
-```R
-
+```r
 #dc poverty rate
 dc_student_poverty <- read_csv("~/Desktop/Data Repo/2019/08/HUBZone_FOLO/HUBZone Data/dc_enrollment_poverty_pivot.csv")
-
 ```
 
 the first part of the analysis takes the poverty rate of each tract in DC and remove college students from the poverty universe, finding the poverty rate with students and without.  
