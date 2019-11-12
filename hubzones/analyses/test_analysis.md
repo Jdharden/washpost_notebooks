@@ -12,7 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(readr)
+library(rvest)
+library(htmlTreeParse)
+library(RCurl)
+library(XML)
+library(modelr)
 library(tinytex)
+library(rmarkdown)
 
 ```
 
@@ -25,29 +31,35 @@ load data parsed for federal database
 ```{r load data}
 
 #dc poverty rate
-dc_student_poverty <- read_csv("~/Desktop/Data Repo/2019/08/HUBZone_FOLO/HUBZone Data/dc_enrollment_poverty_pivot.csv")
+us_analysis <- read_csv("~/us_qualified.csv",
+                        na = "NA")
+options(stringsAsFactors = FALSE)
+
+us_analysis_tibble <- as_tibble(us_qualified_13_19)
 
 ```
 
-the first part of the analysis takes the poverty rate of each tract in DC and remove college students from the poverty universe, finding the poverty rate with students and without.  
+#filter businesses by qct eligibility and gather by years. identifying tracts that have not qualified since 
+#2013 but have managed to stay in the program and continue benefiting from lucrative contracts. 
 
 ```{r pressure, echo=FALSE}
 
-dc_poverty_rate <- group_by(dc_student_poverty, Id2) %>% 
-  summarise(total_poverty_rate = sum(poverty_level / total) * 100,
-            total_wo_students = sum((poverty_level - (undergraduate +  graduate))) / total * 100,
-            pct_point_change = sum(total_wo_students - total_poverty_rate))
+filter_qualified_4_yr <- filter(us_analysis_tibble, 
+                                 `13qct`== 0, `14qct` == 0, `15qct` == 0, 
+                                 `17qct` == 0, `18qct` == 0, `19qct` == 0) %>%
+  select(state, `2016`, `2017`, `2018`, `2019`) %>% 
+  gather (`2016`, `2017`, `2018`, `2019`, key = four_year_total, value = "dollars")  %>%
+  group_by(state) %>%
+  summarize(
+    total = sum(dollars, na.rm = TRUE)
+  )
 
 ```
 
-to qualify for the HUBZone program, a tract must have a poverty rate of 25 percent or higher (no rounding)  
+#filtering and sorting states by the top 15  
 
 ```{r result, echo=FALSE}
 
-dc_below_25 <- filter(dc_poverty_rate, total_poverty_rate > 25, total_wo_students < 25)
-
-dc_below_25
+top_15_states <- head(filter_qualified_4_yr, 15)
 
 ```
-```{r}
-=
