@@ -1,5 +1,5 @@
 ----
-hubzone algorithm analysis
+# hubzone algorithm analysis
 ----
 
 ```{r setup, include=FALSE}
