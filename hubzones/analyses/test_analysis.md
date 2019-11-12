@@ -17,12 +17,13 @@ library(rmarkdown)
 
 ```
 
-## HUBZone DC college student analysis
+# HUBZone DC college student analysis
 
 Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov was used to analyze HUBZone contracts awarded to firms in Washington, DC. Data shows that more than $1 billion in federal dollars was awarded since 2000. # However, many of those dollars were awarded to firms in areas considered economically stable. The point of the HUBZone program was to level the playing field between firms in economically stable communities and businesses in areas that are historically neglected. 
 
 ----
 load data parsed from federal database
+
 ----
 ```{r load data}
 
@@ -37,6 +38,7 @@ us_analysis_tibble <- as_tibble(us_qualified_13_19)
 ----
 filter businesses by qct eligibility and gather by years. identifying tracts that have not qualified since 
 2013 but have managed to stay in the program and continue benefiting from lucrative contracts. 
+
 ----
 
 ```{r filter, echo=FALSE}
@@ -55,6 +57,7 @@ filter_qualified_4_yr <- filter(us_analysis_tibble,
 
 ----
 filtering and sorting states by the top 15  
+
 ----
 
 ```{r result, echo=FALSE}
