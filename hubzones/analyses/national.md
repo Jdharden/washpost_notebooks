@@ -19,7 +19,11 @@ library(rmarkdown)
 
 # HUBZone National Analysis
 
-Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov was used to analyze HUBZone contracts awarded to firms in Washington, DC. Data shows that more than $1 billion in federal dollars was awarded since 2000. # However, many of those dollars were awarded to firms in areas considered economically stable. The point of the HUBZone program was to level the playing field between firms in economically stable communities and businesses in areas that are historically neglected. 
+Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov was used to analyze HUBZone contracts awarded to firms in Washington, DC. Data shows that more than $1 billion in federal dollars was awarded since 2000. 
+
+However, many of those dollars were awarded to firms in areas considered economically stable. 
+
+The point of the HUBZone program was to level the playing field between firms in economically stable communities and businesses in areas that are historically neglected. 
 
 ----
 load data parsed from federal database
