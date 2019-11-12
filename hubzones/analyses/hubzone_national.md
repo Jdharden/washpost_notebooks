@@ -45,7 +45,9 @@ us_analysis_tibble <- as_tibble(us_qualified_13_19)
 
 ```
 ----
-Filtering businesses by qualified census tract eligibility, gathered by years. We are identifying tracts that have not qualified since 2013 but have managed to stay in the program and continue benefiting from lucrative contracts since 2016. 
+Filtering businesses by qualified census tract eligibility, gathered by years. We are identifying tracts that have not qualified since 2013 but have managed to stay in the program and continue benefiting from lucrative contracts since 2016.
+
+Tracts that have not qualified since 2013, indicated that these areas have income levels and poverty rates below the required benchmarks to benefit from the HUBZone program. 
 
 ```{r filter, echo=FALSE}
 
