@@ -7,6 +7,8 @@ The codes used for this project were all written in R.
 To examine the distribution of contracts, Post data reporters examined three variables:Location, poverty rates and income factors. 
 
 
+https://geocoding.geo.census.gov/
+
 <span style="color: #999999; font-size: large;">HUBZone Program Database/Analysis </span><br />
 <br />
 <img src="https://github.com/Jdharden/washpost-hubzone_wp/blob/master/dc_grid/hubzone.png?raw=true" alt="HUBZone Top Firms"><br />
