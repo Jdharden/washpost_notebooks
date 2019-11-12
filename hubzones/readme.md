@@ -1,4 +1,4 @@
-# hubzone_wp
+# HUBZone
 
 # How The Washington Post Analyzed HUBZone Contacts in Washington, DC. 
 
