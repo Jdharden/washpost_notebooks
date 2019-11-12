@@ -1,5 +1,12 @@
 ----
-# hubzone algorithm analysis
+# HUBZone Algorithm Analysis
+
+  In 2018, the Washington Post requested information from the Small Business Administration, regarding its HUBZone Program. The Post asked for data related to contracts awarded to HUBZone firms using the HUBZone set aside. 
+
+The SBA told the Post it did not have the capabilities to map and analyze the data, so we did it for them, beginning with Washington D.C. [The Post mapped where more than $1 billion in contracts were funneled](https://www.washingtonpost.com/local/a-federal-program-was-established-to-help-disadvantaged-areas-thats-not-where-most-of-the-money-goes/2019/04/25/c0bae5c2-f411-11e8-80d0-f7e1948d55f4_story.html?wpisrc=nl_lclheads&wpmm=1).
+  
+  In the months that followed, I decided to expand that across the nation. So I mapped where the more than $33 billion in  HUBZone-related set-asides landed across the nation. 
+
 ----
 
 ```{r setup, include=FALSE}
