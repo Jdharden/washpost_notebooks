@@ -27,7 +27,6 @@ load data parsed for federal database
 ----
 ```{r load data}
 
-#dc poverty rate
 us_analysis <- read_csv("~/us_qualified.csv",
                         na = "NA")
 options(stringsAsFactors = FALSE)
@@ -39,7 +38,7 @@ us_analysis_tibble <- as_tibble(us_qualified_13_19)
 filter businesses by qct eligibility and gather by years. identifying tracts that have not qualified since 
 2013 but have managed to stay in the program and continue benefiting from lucrative contracts. 
 ----
-```{r pressure, echo=FALSE}
+```{r filter, echo=FALSE}
 
 filter_qualified_4_yr <- filter(us_analysis_tibble, 
                                  `13qct`== 0, `14qct` == 0, `15qct` == 0, 
