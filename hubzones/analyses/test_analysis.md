@@ -1,8 +1,6 @@
 ----
-title: "hubzone algorithm analysis"
-author: "John D. Harden"
-date: "8/27/2019"
----
+hubzone algorithm analysis
+----
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
