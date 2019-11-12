@@ -84,4 +84,4 @@ ggplot(top_15_states , aes(x = total, y = reorder(state, total))) +
     linetype = "dashed")
     )
 ```
-<img alt="HUBZone Top Firms" height="524" src="https://github.com/Jdharden/washpost-hubzone_wp/raw/master/dc_grid/hubzone.png?raw=true" width="640" />
+<img alt="HUBZone Top Firms" height="524" src="https://github.com/Jdharden/wapo_notebooks/blob/master/hubzones/outputs/Rplot.png?raw=true" width="640" />
