@@ -45,8 +45,7 @@ us_analysis_tibble <- as_tibble(us_qualified_13_19)
 
 ```
 ----
-filter businesses by qct eligibility and gather by years. identifying tracts that have not qualified since 
-2013 but have managed to stay in the program and continue benefiting from lucrative contracts.
+Filtering businesses by qualified census tract eligibility, gathered by years. We are identifying tracts that have not qualified since 2013 but have managed to stay in the program and continue benefiting from lucrative contracts since 2016. 
 
 ```{r filter, echo=FALSE}
 
@@ -62,9 +61,25 @@ filter_qualified_4_yr <- filter(us_analysis_tibble,
 
 ```
 ----
-filtering and sorting states by the top 15  
+Futhermore, we can filter and sort states by the top 15 -- revealing which states in the U.S. have tracts in which HUBZone benefits have flowed into wealthy neighborhoods, rather than the communities it was intended to help. 
+
 ```{r result, echo=FALSE}
 
 top_15_states <- head(filter_qualified_4_yr, 15)
+```
+
+
+----
+Graphing the 2016-2019 data to highlight which states have the highest level of contracts awarded to wealthy Census tracts
 
 ```
+ggplot(top_15_states , aes(x = total, y = reorder(state, total))) +
+    geom_point() +
+    theme(
+      panel.grid.major.x = element_blank (), 
+      panel.grid.minor.x = element_blank (),
+      panel.grid.major.y = element_line ( colour = "grey60" ,
+    linetype = "dashed")
+    )
+```
+
