@@ -49,7 +49,7 @@ Tracts that have not qualified since 2013, indicated that these areas have incom
 The analysis focuses on census tracts but also accounts for [Difficult Development Areas](https://www.huduser.gov/portal/datasets/qct.html#2019), which can also be designated HUBZone areas if certain economic conditions are met. 
 
 ```
-## function determining which tracts/DDAs haven't qualified since 2013, but have continued to benefit from the program from 2016 - 2019. 
+Function determining which tracts/DDAs haven't qualified since 2013, but have continued to benefit from the program from 2016 - 2019. 
 
 filter_qualified_4_yr <- filter(us_analysis_tibble, 
                                  `13qct`== 0, `14qct` == 0, `15qct` == 0, 
