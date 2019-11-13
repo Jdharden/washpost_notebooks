@@ -9,17 +9,6 @@ The SBA told the Post it did not have the capabilities to map and analyze the da
 
 ----
 
-```
-library(tidyverse)
-library(readr)
-library(rvest)
-library(htmlTreeParse)
-library(RCurl)
-library(XML)
-library(modelr)
-library(tinytex)
-library(rmarkdown)
-```
 
 # HUBZone National Analysis
 
@@ -31,8 +20,16 @@ The point of the HUBZone program was to level the playing field between firms in
 
 ----
 
-load data parsed from federal database
-```{r load data}
+```
+library(tidyverse)
+library(readr)
+library(rvest)
+library(htmlTreeParse)
+library(RCurl)
+library(XML)
+library(modelr)
+library(tinytex)
+library(rmarkdown)
 
 us_analysis <- read_csv("~/us_qualified.csv",
                         na = "NA")
