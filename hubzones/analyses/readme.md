@@ -1,16 +1,18 @@
 ----
-# HUBZone Algorithm Analysis
+# HUBZone National Analysis
 
   In 2018, the Washington Post requested information from the Small Business Administration, regarding its HUBZone Program. The Post asked for data related to contracts awarded to HUBZone firms using the HUBZone set aside. 
 
 The SBA told the Post it did not have the capabilities to map and analyze the data, so we did it for them, beginning with Washington D.C. [The Post mapped where more than $1 billion in contracts were funneled](https://www.washingtonpost.com/local/a-federal-program-was-established-to-help-disadvantaged-areas-thats-not-where-most-of-the-money-goes/2019/04/25/c0bae5c2-f411-11e8-80d0-f7e1948d55f4_story.html?wpisrc=nl_lclheads&wpmm=1).
   
-  In the months that followed, I decided to expand that across the nation. So I mapped about $35 billion in  HUBZone-related set-asides landed across the nation. 
+  In the months that followed, I decided to expand that across the nation. 
+  
+  So I mapped about $35 billion in  HUBZone-related set-asides landed across the nation. 
 
 ----
 
 
-## HUBZone National Analysis
+## Exploring the HUBZone algorithm
 
 Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov was used to analyze HUBZone contracts awarded to firms in Washington, DC. Data shows that more than $1 billion in federal dollars was awarded since 2000. 
 
@@ -33,6 +35,7 @@ library(rmarkdown)
 
 us_analysis <- read_csv("~/us_qualified.csv",
                         na = "NA")
+
 options(stringsAsFactors = FALSE)
 
 us_analysis_tibble <- as_tibble(us_qualified_13_19)
@@ -45,7 +48,8 @@ Tracts that have not qualified since 2013, indicated that these areas have incom
 
 The analysis focuses on census tracts but also accounts for [Difficult Development Areas](https://www.huduser.gov/portal/datasets/qct.html#2019), which can also be designated HUBZone areas if certain economic conditions are met. 
 
-```{r filter, echo=FALSE}
+```
+## function determining which tracts/DDAs haven't qualified since 2013, but have continued to benefit from the program from 2016 - 2019. 
 
 filter_qualified_4_yr <- filter(us_analysis_tibble, 
                                  `13qct`== 0, `14qct` == 0, `15qct` == 0, 
