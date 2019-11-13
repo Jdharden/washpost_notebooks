@@ -31,4 +31,6 @@ Much like the District, The Post’s analysis shows outdated data has steered bi
 
 From 2016 to 2019, HUBZone contracts sent about $4.5 billion, or more than a quarter of HUBZone awards during that time, to areas that have not qualified for the program since 2013 — the result of multiyear contracts signed when those areas qualified, the analysis found.
 
+### Location of HUBZone firms across the US
+
 <img border="0" height="324" src="https://2.bp.blogspot.com/-nIbOr7W40qg/XcsIZ6VFysI/AAAAAAAAJRY/nOZ8VPbYHQQVmlotul_pJW01ffVMt35CACK4BGAYYCw/s640/Screen%2BShot%2B2019-11-12%2Bat%2B2.30.38%2BPM.png" width="640" />
