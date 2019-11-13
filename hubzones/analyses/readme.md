@@ -49,12 +49,14 @@ Filtering businesses by qualified census tract eligibility, gathered by years. W
 
 Tracts that have not qualified since 2013, indicated that these areas have income levels and poverty rates below the required benchmarks to benefit from the HUBZone program. 
 
+The analysis focuses on census tracts but also accounts for [Difficult Development Areas](https://www.huduser.gov/portal/datasets/qct.html#2019), which can also be designated HUBZone areas if certain economic conditions are met. 
+
 ```{r filter, echo=FALSE}
 
 filter_qualified_4_yr <- filter(us_analysis_tibble, 
                                  `13qct`== 0, `14qct` == 0, `15qct` == 0, 
-                                 `17qct` == 0, `18qct` == 0, `19qct` == 0) %>%
-  select(state, `2016`, `2017`, `2018`, `2019`) %>% 
+                                 `17qct` == 0, `18qct` == 0, `19qct` == 0, `DDA` == 0) %>%
+  select(state, `2016`, `2017`, `2018`, `2019`) %>%
   gather (`2016`, `2017`, `2018`, `2019`, key = four_year_total, value = "dollars")  %>%
   group_by(state) %>%
   summarize(
