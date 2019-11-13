@@ -9,9 +9,7 @@ The SBA told the Post it did not have the capabilities to map and analyze the da
 
 ----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+```
 library(tidyverse)
 library(readr)
 library(rvest)
@@ -21,7 +19,6 @@ library(XML)
 library(modelr)
 library(tinytex)
 library(rmarkdown)
-
 ```
 
 # HUBZone National Analysis
