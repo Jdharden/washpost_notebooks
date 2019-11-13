@@ -16,4 +16,4 @@ based qualifications used by some other programs.
 But the program appears to have inadvertently fostered a new divide. A Washington Post analysis iin April 2019 of 20 years of
 HUBZone data shows that about $800 million earmarked for firms enrolled in the program was awarded to just 11 D.C. businesses.
 
-<img alt="HUBZone Top Firms" height="524" src="https://www.washingtonpost.com/resizer/h36gVH4IJAboE6ZS3EGfWj0z_LE=/1440x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/FIMAE6BPZYI6TB4BOY3BT4JMWQ.jpg" width="640" />
+<img alt="HUBZone Top Firms" height="524" src="http://3.bp.blogspot.com/-ShvrEeJ5bp8/XcwN4o1-2sI/AAAAAAAAJR4/eQLNp-ELU-saUfluw_1u7or1JpxZEyLEwCK4BGAYYCw/s640/FIMAE6BPZYI6TB4BOY3BT4JMWQ.jpeg" width="640" />
