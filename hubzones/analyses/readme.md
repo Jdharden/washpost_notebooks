@@ -55,7 +55,7 @@ The analysis focuses on census tracts but also accounts for [Difficult Developme
 
 filter_qualified_4_yr <- filter(us_analysis_tibble, 
                                  `13qct`== 0, `14qct` == 0, `15qct` == 0, 
-                                 `17qct` == 0, `18qct` == 0, `19qct` == 0, `DDA` == 0) %>%
+                                 `17qct` == 0, `18qct` == 0, `19qct` == 0, `DDA` == 0, `DDA` == "null") %>%
   select(state, `2016`, `2017`, `2018`, `2019`) %>%
   gather (`2016`, `2017`, `2018`, `2019`, key = four_year_total, value = "dollars")  %>%
   group_by(state) %>%
