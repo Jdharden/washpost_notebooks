@@ -2,9 +2,13 @@
 
 ## The codes used for this project were all written in R. 
 
-To examine the distribution of contracts, the Post examined three variables, which include location, poverty rates and income factors. The locations of firms and contracts awarded were obtained from https://www.fpds.gov/fpdsng_cms/index.php/en/. 
+Tools used 
 
-The parameters used to pull the data obtained from the FPDS' data dictionary and EzSearch FAQ. 
+- R 
+- QGIS 
+- Geocoding.geo.census.gov
+
+To examine the distribution of contracts, the Post examined three variables, which include location, poverty rates and income factors. The locations of firms and contracts awarded were obtained from https://www.fpds.gov/fpdsng_cms/index.php/en/. The parameters used to pull the data obtained from the FPDS' data dictionary and EzSearch FAQ. 
 
 There are four types of HUBZone designations. They are: qualified census tract; qualified nonmetropolitan county; qualified Indian reservation; and, qualified base closure area. The analysis accounts for each of the unique designations.
 
