@@ -17,3 +17,7 @@ But the program appears to have inadvertently fostered a new divide. A Washingto
 HUBZone data shows that about $800 million earmarked for firms enrolled in the program was awarded to just 11 D.C. businesses.
 
 <img alt="HUBZone Top Firms" src="http://3.bp.blogspot.com/-ShvrEeJ5bp8/XcwN4o1-2sI/AAAAAAAAJR4/eQLNp-ELU-saUfluw_1u7or1JpxZEyLEwCK4BGAYYCw/s640/FIMAE6BPZYI6TB4BOY3BT4JMWQ.jpeg" width="auto" />
+
+
+
+<img border="0" height="324" src="https://2.bp.blogspot.com/-nIbOr7W40qg/XcsIZ6VFysI/AAAAAAAAJRY/nOZ8VPbYHQQVmlotul_pJW01ffVMt35CACK4BGAYYCw/s640/Screen%2BShot%2B2019-11-12%2Bat%2B2.30.38%2BPM.png" width="640" />
