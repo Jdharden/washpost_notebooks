@@ -8,9 +8,11 @@ Tools used
 - QGIS 
 - Geocoding.geo.census.gov
 
-To examine the distribution of contracts, the Post examined three variables, which include location, poverty rates and income factors. The locations of firms and contracts awarded were obtained from https://www.fpds.gov/fpdsng_cms/index.php/en/. The parameters used to pull the data obtained from the FPDS' data dictionary and EzSearch FAQ. 
+To examine the distribution of contracts, the Post examined three variables, which include location, poverty rates and income factors. The locations of firms and contracts awarded were obtained from https://www.fpds.gov/fpdsng_cms/index.php/en/. 
 
-There are four types of HUBZone designations. They are: qualified census tract; qualified nonmetropolitan county; qualified Indian reservation; and, qualified base closure area. The analysis accounts for each of the unique designations.
+The parameters used to pull the data obtained from the FPDS' data dictionary and EzSearch FAQ. 
+
+There are four types of HUBZone designations. They are: qualified census tract; qualified nonmetropolitan county; qualified Indian reservation; and, qualified base closure area. The analysis accounts for each of the unique designations through FY 2000 through 2019.
 
 HUBZone firm recipients were geocoded using the U.S. Census geocoder.
 
@@ -35,4 +37,4 @@ A new Washington Post analysis since April found the HUBZone program’s use of 
 
 Much like the District, The Post’s analysis shows outdated data has steered billions from firms in neighborhoods across the country that the program is intended to benefit. 
 
-From 2016 to 2019, HUBZone contracts sent about $4.5 billion, or more than a quarter of HUBZone awards during that time, to areas that have not qualified for the program since 2013 — the result of multiyear contracts signed when those areas qualified, the analysis found.
+From FY 2016 to FY 2019, HUBZone contracts sent about $4.5 billion, or more than a quarter of HUBZone awards during that time, to areas that have not qualified for the program since 2013 — the result of multiyear contracts signed when those areas qualified, the analysis found.
