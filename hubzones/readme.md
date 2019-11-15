@@ -33,8 +33,10 @@ What had been unclear was how neighborhoods with higher levels of wealth and pri
 
 An tract that exited the program indicated an economic improvement within that area. 
 
-A new Washington Post analysis since April found the HUBZone program’s use of outdated and unadjusted data allowed businesses in wealthy areas to qualify for more than $780 million in federal contracts meant for firms in underserved neighborhoods. Rather than improve inequalities, critics say the program has exacerbated disparities and question whether its calculations fit the program’s mission.
+A new Washington Post analysis since April found the HUBZone program’s use of outdated and unadjusted data allowed businesses in wealthy areas to qualify for more than $550 million in federal contracts meant for firms in underserved neighborhoods. 
+
+Rather than improve inequalities, critics say the program has exacerbated disparities and question whether its calculations fit the program’s mission.
 
 Much like the District, The Post’s analysis shows outdated data has steered billions from firms in neighborhoods across the country that the program is intended to benefit. 
 
-From FY 2016 to FY 2019, HUBZone contracts sent about $4.5 billion, or more than a quarter of HUBZone awards during that time, to areas that have not qualified for the program since 2013 — the result of multiyear contracts signed when those areas qualified, the analysis found.
+From FY 2016 to FY 2019, HUBZone contracts sent about $2 billion, or more than 40 percent of HUBZone awards during that time, to areas that have not qualified for the program since 2013 — the result of multiyear contracts signed when those areas qualified, the analysis found.
