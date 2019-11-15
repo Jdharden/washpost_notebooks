@@ -3,11 +3,10 @@
 
   In 2018, the Washington Post requested information from the Small Business Administration, regarding its HUBZone Program. The Post asked for data related to contracts awarded to HUBZone firms using the HUBZone set aside. 
 
-The SBA told the Post it did not have the capabilities to map and analyze the data, so we did it for them, beginning with Washington D.C. [The Post mapped where more than $1 billion in contracts were funneled](https://www.washingtonpost.com/local/a-federal-program-was-established-to-help-disadvantaged-areas-thats-not-where-most-of-the-money-goes/2019/04/25/c0bae5c2-f411-11e8-80d0-f7e1948d55f4_story.html?wpisrc=nl_lclheads&wpmm=1).
+The SBA told the Post it did not have the capabilities to map and analyze the data, so we did it for them, beginning with Washington D.C. [The Post mapped where more than $1 billion in contracts were funneled 
+(https://www.washingtonpost.com/local/a-federal-program-was-established-to-help-disadvantaged-areas-thats-not-where-most-of-the-money-goes/2019/04/25/c0bae5c2-f411-11e8-80d0-f7e1948d55f4_story.html?wpisrc=nl_lclheads&wpmm=1).
   
-  In the months that followed, I decided to expand that across the nation. 
-  
-  So I mapped about $35 billion in  HUBZone-related set-asides landed across the nation. 
+  In the months that followed, I decided to expand that across the nation. So I mapped about $5 billion in  HUBZone-related set-asides landed across the nation. 
 
 ----
 
@@ -16,9 +15,7 @@ The SBA told the Post it did not have the capabilities to map and analyze the da
 
 Summary: Data obtained from https://www.fpds.gov and https://www.usaspending.gov was used to analyze HUBZone contracts awarded to firms in Washington, DC. Data shows that more than $1 billion in federal dollars was awarded since 2000. 
 
-However, many of those dollars were awarded to firms in areas considered economically stable. 
-
-The point of the HUBZone program was to level the playing field between firms in economically stable communities and businesses in areas that are historically neglected. 
+However, many of those dollars were awarded to firms in areas considered economically stable. The point of the HUBZone program was to level the playing field between firms in economically stable communities and businesses in areas that are historically neglected. 
 
 ----
 
@@ -72,7 +69,7 @@ top_15_states <- head(filter_qualified_4_yr, 15)
 
 
 ----
-Graphing the 2016-2019 data to highlight which states have the highest level of contracts awarded to wealthy Census tracts
+Graphing the 2015-2019 data to highlight which states have the highest level of contracts awarded to wealthy Census tracts
 
 ```
 ggplot(top_15_states , aes(x = total, y = reorder(state, total))) +
