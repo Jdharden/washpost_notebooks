@@ -15,3 +15,45 @@ Eighty-one of those deaths were gun related. And additionally, gun seizure data 
 
 Shapefiles created and exported from QGIS. Boundaries were collected from DC OPEN DATA. Grid shapefiles were created by the Washington Post, using QGIS. 
 ```{r include=FALSE}
+library(tidyverse)
+library(lubridate)
+library(rgdal)
+library(broom)
+library(RColorBrewer)
+library(maps)
+library(sf)
+
+shotspotter_data <- read_csv("~/Desktop/shotspotter/shotspotter_database.csv") #import data
+dc <- st_read("~/Desktop/shotspotter/r_shotspotter_.geojson")  #grid layout
+dc_river <- st_read("~/Desktop/Data Repo/Commonly Used Shapefiles/Waterbodies/Waterbodies.shp")
+dc_ward <- st_read("~/Desktop/shotspotter/dc_ward.geojson")
+
+
+```
+
+### Results
+A breakdown of the ShotSpotter Incidents by neighborhood
+```{r}
+#count types of shooting incidents from ShotsSpotter 
+nbh_counts <- shotspotter_data %>%
+  group_by(nbh_names) %>%
+  count(nbh_names) %>%
+  filter(n > 500) %>%
+  arrange(n)
+
+nbh_counts 
+
+```
+
+Map package reveals that one area of the District, in Southeast, has a higher concentration of gunshots, based on ShotSpotter locations.  
+
+```{r}
+#mapping heatmap
+
+ggplot() +
+  geom_sf(data = dc_ward, aes()) +
+  geom_sf(data = dc, aes(fill = shots_n)) +
+  geom_sf(data = dc_river, aes()) +
+  theme_void ()
+
+```
