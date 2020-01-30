@@ -57,3 +57,91 @@ ggplot() +
   theme_void ()
 
 ```
+
+The neighborhoods of Congress Heights, Bellevue and Washington Highlands have tallied the most incidents of gunshots in the district from 2017 to Sept. 2019, based on ShotSpotter data. More than 3,565 bullet casings were recovered in the police districts that overlap those neighborhoods. 
+
+```{r}
+nbh_counts <- shotspotter_data %>%
+  group_by(nbh_names) %>%
+  count(nbh_names) %>%
+  filter(n > 500) %>%
+  arrange(n)
+
+nbh_counts 
+
+```
+
+
+```{r}
+
+#shots by neighborhood cluster 
+ggplot(nbh_counts, aes(x = reorder(nbh_names, n), y = n, fill = nbh_names)) +
+  geom_col() +
+  ggtitle("Shooting Incidents by Neighborhoods") +
+  theme(axis.text.x = element_text(angle=5, vjust= 1, size = 4.5),
+        legend.position = "top",
+        legend.text = element_text(
+          size = 5),
+        legend.title = element_text(
+          size = 0
+        )) +
+  scale_fill_brewer( palette = "Pastel1") #shows total number of shots 2017_sept2019
+
+```
+
+
+```{r}
+#shooting incidents by date and neighborhood
+shots_by_day <- shotspotter_data %>%
+  group_by(date, nbh_names) %>%
+  count(date) %>%
+  filter(n > 2) %>%
+  filter(nbh_names %in% c("Congress Heights, Bellevue, Washington Highlands",
+                          "Douglas, Shipley Terrace", "Capitol View, Marshall Heights, Benning Heights",
+                          "Deanwood, Burrville, Grant Park, Lincoln Heights, Fairmont Heights"
+                          ))
+
+shots_by_day
+
+```
+Data obtained and analyzed by the Washington Post reveals the neighborhoods of Congress Heights, Bellevue and Washington Highlands have tallied the most incidents of gunshots in the district from 2017 to Sept. 2019, based on ShotSpotter data. 
+That area in Ward 8 has recorded nearly 2,500 incidents since 2017 – often going less than a day (an average of .41 days) without hearing a gunshot. 
+
+#### Following chart shows frequency of gunshots.
+
+```{r, fig.width = 20, fig.height = 5}
+ggplot(shots_by_day, aes(date)) +
+  geom_freqpoly(mapping = aes(color = nbh_names), binwidth = 20) + 
+  facet_wrap(nbh_names ~ .) + 
+  theme(
+    strip.text = element_text(size = rel(.5))
+  )
+
+```
+```{r}
+#avg no. of days without gunshots 
+days_since <- shotspotter_data %>%
+  arrange(date, nbh_names) %>%
+  group_by(nbh_names) %>%
+  mutate(no_of_days = c(0,diff(date))) %>%
+  summarise(
+    avg_days = mean(no_of_days)
+  ) %>%
+filter(avg_days < 2, avg_days > 0)
+
+days_order <- arrange(days_since, desc(avg_days))
+
+days_order
+
+```
+
+```{r}
+avg_days <- ggplot(days_order, aes(x = reorder(nbh_names, avg_days), y = avg_days)) +
+  geom_col() +
+  ggtitle("Avg. days without recording a gunshot") +
+  theme(axis.text.x = element_text(angle=20, size = 4))  # showing days frequency of recorded gunshots by the District's shotsspotter system
+
+avg_days
+```
+
+####### MPD warns that sensor technology isn’t perfect and may include duplicate incidents or unverified shots. Data is classified and assessed by ShotSpotter personnel. An incident may involve one gunshot or multiple gunshots depending on the time elapsed between each shot. Lastly, the data does not provide coverage for the entire District -- only targeting high population density areas with frequent sounds of gunshots incidents.
