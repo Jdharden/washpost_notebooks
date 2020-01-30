@@ -1,4 +1,4 @@
-#Findings 
+# Findings 
 
 Data obtained and analyzed by the Washington Post reveals the neighborhoods of Congress Heights, Bellevue and Washington Highlands have tallied the most incidents of gunshots in the district from 2017 to Sept. 2019, based on ShotSpotter data. 
 
