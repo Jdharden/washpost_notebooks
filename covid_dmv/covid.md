@@ -2,4 +2,4 @@
 
 
 
-<img src="pic_trulli.jpg" alt="Italian Trulli">
+<img src="https://github.com/Jdharden/washpost_notebooks/blob/master/covid_dmv/images/blog2_516.jpeg?raw=true" alt="covid_chart">
