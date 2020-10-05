@@ -1,12 +1,3 @@
----
-title: "District Tree Removals"
-output:
-  html_document:
-    df_print: paged
-  word_document: default
-data: '2019-12-02'
----
-
 #### The following dataset is a breakdown of special tree permits and workorders in DC. Special Tree Permits illustrate how often private property owners in D.C. request to have trees removed throughout the city each fiscal year. Work orders on the other hand are city initiated removals in which the city removes trees because of health reasons and/or hazards. 
 
 ## Analyzing Special Tree Permits
