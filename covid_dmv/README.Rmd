@@ -1,0 +1,193 @@
+---
+title: "Virus Tracking"
+author: "John D. Harden"
+date: "11/2/2020"
+output:
+  html_document:
+  variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+
+library(readxl)
+library(tidyverse)
+library(zoo)
+library(RcppRoll)
+
+##population_data to calculate per capita rates
+setwd("~/Desktop/Data Repo/2020/10/zip_code_rate")
+population <- read_csv("dmv_county_populations.csv")
+##dc files
+setwd("~/Desktop/Data Repo/2020/10/zip_code_rate/raw_data")
+#dc <- read_xlsx("dc_data.xlsx") 
+dc <- read_csv("dc_data.csv") 
+##va files
+va <- read_csv("VDH-COVID-19-PublicUseDataset-Cases.csv")
+##three files from maryland
+md <- read_csv("MDCOVID19_CasesByCounty.csv")
+md_deaths <- read_csv("MDCOVID19_ConfirmedDeathsByCounty.csv")
+md_pdeaths <- read_csv("MDCOVID19_ProbableDeathsByCounty.csv")
+##select for capitol region analysis
+dc_region_areas <- c("11001","24031","24033","51013","51510")
+#clean and combine maryland data
+md_1 <- md %>%
+  gather(Allegany:Unknown, key = "county", value = infections)
+md_2 <- md_deaths %>%
+  gather(Allegany:Unknown, key = "county", value = deaths)
+md_3 <- md_pdeaths %>%
+  gather(Allegany:Unknown, key = "county", value = pdeaths)
+md_4 <- bind_rows(md_1, md_2, md_3) %>%
+  mutate(DATE = as.Date(DATE))
+
+## fix population vector
+population <- population %>%
+  select(fips, key, total_pop)
+
+#clean maryland
+maryland_county_data  <- md_4 %>% replace(is.na(.), 0) %>%
+  rename(locality = county, date = DATE) %>%
+  group_by(locality, date) %>%
+  summarise(infections = sum(infections),
+            deaths = sum(deaths),
+            pdeaths = sum(pdeaths)) %>%
+  mutate(death_total = deaths + pdeaths) %>%
+  arrange(locality) %>% ungroup() %>% group_by(locality) %>%
+  inner_join(population, by = c("locality" = "key")) %>%
+  mutate(
+    death_change = death_total - lag(death_total, default = first(death_total)),
+    rolling_deaths = roll_mean(death_change, 7, align = "right", fill = NA),
+    infection_change = infections - lag(infections, default = first(infections)),
+    rolling_infections = roll_mean(infection_change, 7, align = "right", fill = NA), 
+    cases_per100k = (infection_change/total_pop) * 100000,
+    rolling_case100k = roll_mean(cases_per100k, 7, align = "right", fill = NA),
+    state = "Maryland"
+  ) %>%
+  select(date, locality, fips, death_change, rolling_infections, rolling_deaths, cases_per100k, rolling_case100k) 
+
+
+##clean washington_dc
+washington_dc <- dc %>% 
+  separate(DATE_REPORTED, sep = " ", c("date", "x")) %>%
+  mutate(date = as.Date(date,"%Y/%m/%d")) %>%
+  select(date, TOTAL_POSITIVES_TST, NO_DEATH_TST) %>%
+  #gather(`43897`:`44111`, key = "date", value = "infections") %>%
+  #select(date, ...2, infections) %>% mutate(date = as.numeric(date)) %>%
+  #mutate(date = as.Date(date, origin = "1899-12-30")) %>% 
+  mutate(
+    locality = "Washington D.C.",
+    fips = as.numeric(11001)
+  ) %>%
+  inner_join(population, by = "fips") %>%
+  #filter(...2 %in% c("Total Positives","Number of Deaths")) %>% spread(`...2`, `infections`) %>%
+  rename(deaths = NO_DEATH_TST, infections = TOTAL_POSITIVES_TST) %>%
+  mutate(
+    deaths = as.numeric(deaths),
+    infections = as.numeric(infections),
+    date = as.Date(date),
+    death_change = deaths - lag(deaths, default = first(deaths)),
+    infection_change = infections - lag(infections, default = first(infections)),
+    rolling_infections = roll_mean(infection_change, 7, align = "right", fill = NA),
+    rolling_deaths = roll_mean(death_change, 7, align = "right", fill = NA),
+    cases_per100k = (infection_change/total_pop) * 100000,
+    rolling_case100k = roll_mean(cases_per100k, 7, align = "right", fill = NA),
+    state = "D.C."
+  ) %>%
+  select(date, locality, fips, death_change, rolling_infections, rolling_deaths, cases_per100k, rolling_case100k, state)
+
+##clean virginia data
+virginia_county_data <- va %>%
+  rename(date = `Report Date`, deaths = Deaths, infections = `Total Cases`, fips = FIPS, locality = Locality) %>%
+  arrange(locality) %>%
+  inner_join(population, by = "fips") %>%
+  group_by(fips) %>%
+  mutate(
+    date = as.Date(date, "%m/%d/%Y"),
+    death_change = deaths - lag(deaths, default = first(deaths)),
+    infection_change = infections - lag(infections, default = first(infections)),
+    rolling_infections = roll_mean(infection_change, 7, align = "right", fill = NA),
+    rolling_deaths = roll_mean(death_change, 7, align = "right", fill = NA),
+    cases_per100k = (infection_change/total_pop) * 100000,
+    rolling_case100k = roll_mean(cases_per100k, 7, align = "right", fill = NA),
+    state = "Virginia"
+  ) %>%
+  select(date, locality, fips, death_change, rolling_infections, rolling_deaths, cases_per100k, rolling_case100k)
+
+## combine states and district 
+DMV_county_rates <- bind_rows(virginia_county_data, maryland_county_data, washington_dc)
+
+#clean maryland
+maryland_data <- md_4 %>% replace(is.na(.), 0) %>%
+  rename(locality = county, date = DATE) %>%
+  #filter(locality %in% c("Montgomery","Prince_Georges")) %>%
+  group_by(locality, date) %>%
+  summarise(infections = sum(infections),
+            deaths = sum(deaths),
+            pdeaths = sum(pdeaths)) %>%
+  mutate(death_total = deaths + pdeaths) %>%
+  arrange(locality) %>% ungroup() %>% group_by(locality) %>%
+  inner_join(population, by = c("locality" = "key")) %>%
+  group_by(date) %>%
+  summarise(infections = sum(infections),
+            deaths = sum(deaths),
+            pdeaths = sum(pdeaths),
+            death_total = sum(death_total),
+            total_pop = sum(total_pop)) %>%
+  mutate(
+    death_change = death_total - lag(death_total, default = first(death_total)),
+    rolling_deaths = roll_mean(death_change, 7, align = "right", fill = NA),
+    infection_change = infections - lag(infections, default = first(infections)),
+    rolling_infections = roll_mean(infection_change, 7, align = "right", fill = NA), 
+    cases_per100k = (infection_change/total_pop) * 100000,
+    rolling_case100k = roll_mean(cases_per100k, 7, align = "right", fill = NA),
+    state = "Maryland"
+  ) %>%
+  select(date, death_change, rolling_infections, rolling_deaths, cases_per100k, rolling_case100k, state)
+
+##clean virginia data
+virginia_data <- va %>%
+  rename(date = `Report Date`, deaths = Deaths, infections = `Total Cases`, fips = FIPS, locality = Locality) %>%
+  arrange(locality) %>%
+  #filter(fips %in% c("51013","51059","51107","51153","51510","51600","51610","51683","51685")) %>%
+  inner_join(population, by = "fips") %>%
+  group_by(date) %>%
+  summarise(infections = sum(infections),
+            deaths = sum(deaths),
+            total_pop = sum(total_pop)) %>%
+  mutate(
+    date = as.Date(date, "%m/%d/%Y"),
+    death_change = deaths - lag(deaths, default = first(deaths)),
+    infection_change = infections - lag(infections, default = first(infections)),
+    rolling_infections = roll_mean(infection_change, 7, align = "right", fill = NA),
+    rolling_deaths = roll_mean(death_change, 7, align = "right", fill = NA),
+    cases_per100k = (infection_change/total_pop) * 100000,
+    rolling_case100k = roll_mean(cases_per100k, 7, align = "right", fill = NA),
+    state = "Virginia"
+  ) %>%
+  select(date, death_change, rolling_infections, rolling_deaths, cases_per100k, rolling_case100k, state)
+
+DMV_state_rates <- bind_rows(virginia_data, maryland_data, washington_dc)
+```
+
+## Coronavirus in the Capitol Region 
+##### Anlysis also looks rates in the entire D.C., Maryland and Virginia region
+
+This is simply an ongoing look at the virus throughout the region, measuring cases per capita and deaths. For more insight, information or to give suggestions, feel free to email me at john.harden@washpost.com
+
+## Capitol Region 
+
+```{r dmv, echo=FALSE}
+state <- DMV_state_rates %>%
+  ggplot() +
+  geom_area(aes(date, rolling_infections, fill = state)) +
+  geom_col(aes(date, death_change)) +
+  facet_wrap(.~state, scales = "free_y", nrow = 3) +
+  theme(legend.position = "top") +
+  labs(
+    x = "Date", 
+    y = "Rolling Seven-Day Infection Average",
+    title = "Infection rates in the DMV",
+    subtitle = "Different scales are adjusted to each state"
+  )
+
+state
+```
