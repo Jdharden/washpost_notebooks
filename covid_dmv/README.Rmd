@@ -3,7 +3,7 @@ title: "Virus Tracking"
 author: "John D. Harden"
 date: "11/2/2020"
 output:
-  html_document:
+  md_document:
   variant: markdown_github
 ---
 
