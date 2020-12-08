@@ -144,4 +144,4 @@ avg_days <- ggplot(days_order, aes(x = reorder(nbh_names, avg_days), y = avg_day
 avg_days
 ```
 
-####### MPD warns that sensor technology isn’t perfect and may include duplicate incidents or unverified shots. Data is classified and assessed by ShotSpotter personnel. An incident may involve one gunshot or multiple gunshots depending on the time elapsed between each shot. Lastly, the data does not provide coverage for the entire District -- only targeting high population density areas with frequent sounds of gunshots incidents.
+#### MPD warns that sensor technology isn’t perfect and may include duplicate incidents or unverified shots. Data is classified and assessed by ShotSpotter personnel. An incident may involve one gunshot or multiple gunshots depending on the time elapsed between each shot. Lastly, the data does not provide coverage for the entire District -- only targeting high population density areas with frequent sounds of gunshots incidents.
