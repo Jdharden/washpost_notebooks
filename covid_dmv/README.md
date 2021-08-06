@@ -21,4 +21,4 @@ Capitol Region
 
 Hospital Bed Usage
 --------------
-![](README_files/images/beds.jpeg)
+![](images/beds.jpeg)
