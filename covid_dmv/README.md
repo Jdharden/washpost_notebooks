@@ -15,7 +15,7 @@ Capitol Region
 
     ## Warning: Removed 7 rows containing missing values (position_stack).
 
-![](README_files/figure-markdown_strict/dmv-1.png)
+![](README_files/figure-markdown_strict/dmv-1.png.jpeg)
 
 
 
