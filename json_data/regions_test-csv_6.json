@@ -1,0 +1,745 @@
+[{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 7943,
+      "total_race" : 33918427,
+      "share" : 0.023417949187325225
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 7045,
+      "total_race" : 37674698,
+      "share" : 0.018699552681218572
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 6407,
+      "total_race" : 39937067,
+      "share" : 0.016042740444610015
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 78280,
+      "total_race" : 33918427,
+      "share" : 0.2307890044547172
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 88328,
+      "total_race" : 37674698,
+      "share" : 0.2344491255112383
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 85438,
+      "total_race" : 39937067,
+      "share" : 0.21393158390925404
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 5264533,
+      "total_race" : 33918427,
+      "share" : 15.521159044315352
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 5441338,
+      "total_race" : 37674698,
+      "share" : 14.442950544686518
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 5501976,
+      "total_race" : 39937067,
+      "share" : 13.776615092941103
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "NA",
+      "year" : "2000",
+      "change" : 1267,
+      "total_race" : 33918427,
+      "share" : 0.0037354326602468913
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "NA",
+      "year" : "2010",
+      "change" : 1355,
+      "total_race" : 37674698,
+      "share" : 0.0035965782658695764
+    },
+{
+      "NAME_1" : "East North Central",
+      "pct_rural" : "NA",
+      "year" : "2020",
+      "change" : 1433,
+      "total_race" : 39937067,
+      "share" : 0.0035881453187335964
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 208726,
+      "total_race" : 33918427,
+      "share" : 0.6153764147140431
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 193487,
+      "total_race" : 37674698,
+      "share" : 0.5135727962570529
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 172073,
+      "total_race" : 39937067,
+      "share" : 0.4308603834127328
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 705635,
+      "total_race" : 33918427,
+      "share" : 2.080388338763469
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 718060,
+      "total_race" : 37674698,
+      "share" : 1.9059475937935852
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 689816,
+      "total_race" : 39937067,
+      "share" : 1.7272575374651322
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 2483479,
+      "total_race" : 33918427,
+      "share" : 7.321916785822645
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 2808076,
+      "total_race" : 37674698,
+      "share" : 7.453479786354227
+    },
+{
+      "NAME_1" : "East South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 2946807,
+      "total_race" : 39937067,
+      "share" : 7.378626477502717
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 413,
+      "total_race" : 33918427,
+      "share" : 0.001217627220743462
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 1775,
+      "total_race" : 37674698,
+      "share" : 0.0047113848132239846
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 1509,
+      "total_race" : 39937067,
+      "share" : 0.0037784447215415194
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 62570,
+      "total_race" : 33918427,
+      "share" : 0.18447199806759906
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 69693,
+      "total_race" : 37674698,
+      "share" : 0.18498622072564455
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 65869,
+      "total_race" : 39937067,
+      "share" : 0.16493199162572456
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 5046445,
+      "total_race" : 33918427,
+      "share" : 14.878181113764501
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 5164449,
+      "total_race" : 37674698,
+      "share" : 13.70800371113791
+    },
+{
+      "NAME_1" : "Middle Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 5214764,
+      "total_race" : 39937067,
+      "share" : 13.057453618213877
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 1739,
+      "total_race" : 33918427,
+      "share" : 0.005127006626810848
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 2244,
+      "total_race" : 37674698,
+      "share" : 0.005956252124436405
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 2322,
+      "total_race" : 39937067,
+      "share" : 0.005814147543684167
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 3860,
+      "total_race" : 33918427,
+      "share" : 0.01138024472656117
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 4433,
+      "total_race" : 37674698,
+      "share" : 0.01176651767719545
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 4864,
+      "total_race" : 39937067,
+      "share" : 0.012179161779707058
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 490061,
+      "total_race" : 33918427,
+      "share" : 1.444822308534532
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 706774,
+      "total_race" : 37674698,
+      "share" : 1.8759911492853905
+    },
+{
+      "NAME_1" : "Mountain",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 923364,
+      "total_race" : 39937067,
+      "share" : 2.312047602293879
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 182,
+      "total_race" : 33918427,
+      "share" : 5.365814871072884E-4
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 327,
+      "total_race" : 37674698,
+      "share" : 8.679565261545029E-4
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 494,
+      "total_race" : 39937067,
+      "share" : 0.001236946118251498
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 6763,
+      "total_race" : 33918427,
+      "share" : 0.019939014270915333
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 11129,
+      "total_race" : 37674698,
+      "share" : 0.029539719203588572
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 16216,
+      "total_race" : 39937067,
+      "share" : 0.04060388310438521
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 665720,
+      "total_race" : 33918427,
+      "share" : 1.962708942841011
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 801242,
+      "total_race" : 37674698,
+      "share" : 2.126737684798429
+    },
+{
+      "NAME_1" : "New England",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 909087,
+      "total_race" : 39937067,
+      "share" : 2.2762988579006063
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 538,
+      "total_race" : 33918427,
+      "share" : 0.0015861584618885776
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 724,
+      "total_race" : 37674698,
+      "share" : 0.0019217141435347404
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 883,
+      "total_race" : 39937067,
+      "share" : 0.0022109785878867867
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 7465,
+      "total_race" : 33918427,
+      "share" : 0.022008685721186305
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 8184,
+      "total_race" : 37674698,
+      "share" : 0.0217228018655916
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 8504,
+      "total_race" : 39937067,
+      "share" : 0.021293501598402306
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 2448408,
+      "total_race" : 33918427,
+      "share" : 7.218518712557041
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 2488054,
+      "total_race" : 37674698,
+      "share" : 6.604044974693626
+    },
+{
+      "NAME_1" : "Pacific",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 2524309,
+      "total_race" : 39937067,
+      "share" : 6.320717042140325
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 190335,
+      "total_race" : 33918427,
+      "share" : 0.5611551502668446
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 179604,
+      "total_race" : 37674698,
+      "share" : 0.4767231312643833
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 153203,
+      "total_race" : 39937067,
+      "share" : 0.3836110448471341
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 1570862,
+      "total_race" : 33918427,
+      "share" : 4.631293780221589
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 1618736,
+      "total_race" : 37674698,
+      "share" : 4.296613074376867
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 1493869,
+      "total_race" : 39937067,
+      "share" : 3.7405576128061684
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 9097972,
+      "total_race" : 33918427,
+      "share" : 26.823095304508076
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 10990674,
+      "total_race" : 37674698,
+      "share" : 29.172560321518702
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 12048447,
+      "total_race" : 39937067,
+      "share" : 30.168582485038275
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "NA",
+      "year" : "2000",
+      "change" : 16366,
+      "total_race" : 33918427,
+      "share" : 0.0482510583406477
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "NA",
+      "year" : "2010",
+      "change" : 18146,
+      "total_race" : 37674698,
+      "share" : 0.04816495144831685
+    },
+{
+      "NAME_1" : "South Atlantic",
+      "pct_rural" : "NA",
+      "year" : "2020",
+      "change" : 19101,
+      "total_race" : 39937067,
+      "share" : 0.047827748592554384
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 3292,
+      "total_race" : 33918427,
+      "share" : 0.009705638766797765
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 4567,
+      "total_race" : 37674698,
+      "share" : 0.012122194051827568
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 5735,
+      "total_race" : 39937067,
+      "share" : 0.014360093093466277
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 32164,
+      "total_race" : 33918427,
+      "share" : 0.09482751072153199
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 38544,
+      "total_race" : 37674698,
+      "share" : 0.10230738943149591
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 42153,
+      "total_race" : 39937067,
+      "share" : 0.10554856219161012
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 1042669,
+      "total_race" : 33918427,
+      "share" : 3.0740488053882924
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 1257854,
+      "total_race" : 37674698,
+      "share" : 3.3387235114665024
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 1465196,
+      "total_race" : 39937067,
+      "share" : 3.668762155217858
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "NA",
+      "year" : "2000",
+      "change" : 24,
+      "total_race" : 33918427,
+      "share" : 7.07579982998622E-5
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "NA",
+      "year" : "2010",
+      "change" : 45,
+      "total_race" : 37674698,
+      "share" : 1.1944355864511507E-4
+    },
+{
+      "NAME_1" : "West North Central",
+      "pct_rural" : "NA",
+      "year" : "2020",
+      "change" : 35,
+      "total_race" : 39937067,
+      "share" : 8.76378828720697E-5
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2000",
+      "change" : 72995,
+      "total_race" : 33918427,
+      "share" : 0.2152075035791017
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2010",
+      "change" : 66166,
+      "total_race" : 37674698,
+      "share" : 0.17562450002917077
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "completely_rural",
+      "year" : "2020",
+      "change" : 51237,
+      "total_race" : 39937067,
+      "share" : 0.12829434870617815
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2000",
+      "change" : 564813,
+      "total_race" : 33918427,
+      "share" : 1.6652098872391694
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2010",
+      "change" : 552409,
+      "total_race" : 37674698,
+      "share" : 1.4662599286130973
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_rural",
+      "year" : "2020",
+      "change" : 497672,
+      "total_race" : 39937067,
+      "share" : 1.2461405841345337
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2000",
+      "change" : 3829560,
+      "total_race" : 33918427,
+      "share" : 11.290499998717511
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2010",
+      "change" : 4418158,
+      "total_race" : 37674698,
+      "share" : 11.727122537252987
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "mostly_urb",
+      "year" : "2020",
+      "change" : 5072308,
+      "total_race" : 39937067,
+      "share" : 12.700752411287489
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "NA",
+      "year" : "2000",
+      "change" : 13348,
+      "total_race" : 33918427,
+      "share" : 0.03935324005444003
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "NA",
+      "year" : "2010",
+      "change" : 13078,
+      "total_race" : 37674698,
+      "share" : 0.03471295244357367
+    },
+{
+      "NAME_1" : "West South Central",
+      "pct_rural" : "NA",
+      "year" : "2020",
+      "change" : 11976,
+      "total_race" : 39937067,
+      "share" : 0.02998717957931162
+    }
+  ]
